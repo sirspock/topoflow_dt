@@ -1,0 +1,36 @@
+#!/bin/bash
+set +x
+set -e
+. .colors.sh
+
+BASEDIR=$PWD
+. $BASEDIR/io.sh 0 8 3 "$@"
+CURDIR=`pwd`
+## INPUTS VARIABLES
+
+
+## PARAMETERS VARIABLES
+data_set_id=${PARAMS1}
+start_date=${PARAMS2}
+end_date=${PARAMS3}
+variable=${PARAMS4}
+bounding_box=${PARAMS5}
+DEM_xres_arcsecs=${PARAMS6}
+DEM_yres_arcsecs=${PARAMS7}
+unit_multifier=${PARAMS8}
+
+
+set -xe
+
+####### WRITE YOUR INVOCATION LINE AFTER THIS COMMENT
+
+
+pushd .
+/ws/run --config examples/dame/templates/topoflow_climate.yml.template -i1 $data_set_id -p1 "$start_date" -p2 "$end_date" -p3 "$variable" -p4 "$bounding_box" -p5  $DEM_xres_arcsecs -p6 $DEM_yres_arcsecs -p7 $unit_multifier -o1 /tmp/mint/outputs1.zip -o2 /tmp/mint/outputs.rti -o3 /tmp/mint/outputs.rts
+popd
+
+set +x
+echo -e "$(c G)[success] The model has exited with code SUCCESS"
+####### WRITE YOUR INVOCATION LINE BEFORE THIS COMMENT
+cd $BASEDIR
+. $BASEDIR/output.sh
