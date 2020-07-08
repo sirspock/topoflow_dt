@@ -1,6 +1,6 @@
 step: 1
 name: topoflow_dt
-docker_image: mosorio/topoflow_dt:20.7.5
+docker_image:  mintproject/dt_dame
 framework: !!python/object/apply:mic.constants.Framework
 - !!python/tuple
   - general
