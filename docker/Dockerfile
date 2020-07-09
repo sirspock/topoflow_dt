@@ -1,1 +1,1 @@
-FROM mintproject/dame_dt
+FROM mintproject/dt_dame
