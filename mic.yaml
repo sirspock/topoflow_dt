@@ -1,6 +1,6 @@
 step: 1
 name: topoflow_dt
-docker_image: mosorio/topoflow_dt:20.7.15
+docker_image: mosorio/topoflow_dt:20.7.16
 framework: !!python/object/apply:mic.constants.Framework
 - !!python/tuple
   - general
@@ -55,5 +55,5 @@ outputs:
     path: outputs1.rts
     format: rts
 github_repo_url: https://github.com/sirspock/topoflow_dt.git
-version: 20.7.15
+version: 20.7.16
 mint_component_url: https://raw.githubusercontent.com/sirspock/topoflow_dt/master/mint_component.zip
