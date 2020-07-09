@@ -1,2 +1,1 @@
-FROM mintproject/generic:latest
-
+FROM mintproject/dame_dt
